@@ -16,13 +16,14 @@
    "prereqs" : {
       "build" : {
          "requires" : {
+            "Alien::Base" : "0.020",
             "IO::Socket::SSL" : "1.56",
             "Net::SSLeay" : "1.49"
          }
       },
       "configure" : {
          "requires" : {
-            "Alien::Base" : "0.020",
+            "Alien::Base::ModuleBuild" : "0",
             "ExtUtils::CChecker" : "0.10",
             "File::ShareDir" : "1.03",
             "Module::Build" : "0.42",

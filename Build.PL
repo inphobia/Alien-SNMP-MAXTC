@@ -38,7 +38,6 @@ my %module_build_args = (
   alien_stage_install => 0,
   build_requires      => {
     "Alien::Base"        => '0.020',
-  
   },
   configure_requires  => {
     "perl"               => '5.010001',

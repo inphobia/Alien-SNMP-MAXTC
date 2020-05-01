@@ -51,7 +51,7 @@
    "provides" : {
       "Alien::SNMP::MAXTC" : {
          "file" : "lib/Alien/SNMP/MAXTC.pm",
-         "version" : "1.000001"
+         "version" : "1.001000"
       }
    },
    "release_status" : "stable",
@@ -60,6 +60,6 @@
          "http://opensource.org/licenses/BSD-3-Clause"
       ]
    },
-   "version" : "1.000001",
-   "x_serialization_backend" : "JSON::PP version 2.94"
+   "version" : "1.001000",
+   "x_serialization_backend" : "JSON::PP version 2.97001"
 }

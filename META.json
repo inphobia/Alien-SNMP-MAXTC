@@ -51,7 +51,7 @@
    "provides" : {
       "Alien::SNMP::MAXTC" : {
          "file" : "lib/Alien/SNMP/MAXTC.pm",
-         "version" : "1.001000"
+         "version" : "1.002000"
       }
    },
    "release_status" : "stable",

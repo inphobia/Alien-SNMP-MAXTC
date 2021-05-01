@@ -5,7 +5,7 @@ use warnings;
 use 5.010001;
 use parent qw(Alien::Base);
 
-our $VERSION = '1.002000';
+our $VERSION = '1.003000';
 
 1;
 
@@ -21,7 +21,7 @@ Alien::SNMP::MAXTC - Alien package for the Net-SNMP library
 
 =head1 VERSION
 
-Version 1.000001
+Version 1.003000
 
 =cut
 

@@ -27,7 +27,7 @@ name: Alien-SNMP-MAXTC
 provides:
   Alien::SNMP::MAXTC:
     file: lib/Alien/SNMP/MAXTC.pm
-    version: '1.001000'
+    version: '1.002000'
 requires:
   Alien::Base: '0.020'
   File::ShareDir: '1.03'

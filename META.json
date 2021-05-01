@@ -60,6 +60,6 @@
          "http://opensource.org/licenses/BSD-3-Clause"
       ]
    },
-   "version" : "1.001000",
+   "version" : "1.002000",
    "x_serialization_backend" : "JSON::PP version 2.97001"
 }

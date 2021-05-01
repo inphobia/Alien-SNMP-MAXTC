@@ -15,7 +15,7 @@ sub main::alien_patch {
     }
   }
 
-  my $maxtc = q{#define MAX_IMPORTS 256};
+  my $maxtc = q{#define MAX_IMPORTS 512};
   tie my @parse, 'Tie::File', 'snmplib/parse.c'
     or die "can't open parse.c: $!";
   for (@parse) {

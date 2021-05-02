@@ -45,7 +45,7 @@ The library is built with the following options:
 
 =over
 
-=item MAXTC set to 16k
+=item MAX_IMPORTS set to 512
 
 =item C<--disable-agent>
 

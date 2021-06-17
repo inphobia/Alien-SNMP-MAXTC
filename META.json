@@ -1,7 +1,7 @@
 {
    "abstract" : "Build and install Net-SNMP",
    "author" : [
-      "Eric A. Miller <emiller AT cpan DOT org>"
+      "Nick Nauwelaerts <inphobia AT cpan DOT org>"
    ],
    "dynamic_config" : 1,
    "generated_by" : "Module::Build version 0.4231",
@@ -57,13 +57,13 @@
    "release_status" : "stable",
    "resources" : {
       "bugtracker" : {
-         "web" : "https://github.com/inphobia/Alien-SNMP-MAXTC/issues"
+         "web" : "https://github.com/inphobia/Alien-SNMP-MIBDEV/issues"
       },
       "license" : [
          "http://opensource.org/licenses/bsd-license.php"
       ],
       "repository" : {
-         "url" : "https://github.com/inphobia/Alien-SNMP-MAXTC"
+         "url" : "https://github.com/inphobia/Alien-SNMP-MIBDEV"
       },
       "x_IRC" : "irc://irc.libera.chat/#netdisco",
       "x_MailingList" : "https://lists.sourceforge.net/lists/listinfo/snmp-info-users"

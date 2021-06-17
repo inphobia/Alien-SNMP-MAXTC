@@ -50,7 +50,7 @@ my %module_build_args = (
 #  create_license    => 1,
   create_readme     => 1,
   dist_abstract     => 'Build and install Net-SNMP',
-  dist_author       => 'Eric A. Miller <emiller AT cpan DOT org>',
+  dist_author       => 'Nick Nauwelaerts <inphobia AT cpan DOT org>',
   dist_name         => 'Alien-SNMP-MIBDEV',
   dist_version_from => 'lib/Alien/SNMP/MIBDEV.pm',
   license           => 'bsd',
@@ -70,8 +70,8 @@ my %module_build_args = (
   },
   meta_merge => {
     resources => {
-      repository => 'https://github.com/inphobia/Alien-SNMP-MAXTC',
-      bugtracker => 'https://github.com/inphobia/Alien-SNMP-MAXTC/issues',
+      repository => 'https://github.com/inphobia/Alien-SNMP-MIBDEV',
+      bugtracker => 'https://github.com/inphobia/Alien-SNMP-MIBDEV/issues',
       MailingList => 'https://lists.sourceforge.net/lists/listinfo/snmp-info-users',
       IRC => 'irc://irc.libera.chat/#netdisco',
     },

@@ -49,6 +49,8 @@ The library is built with the following options:
 
 =item MAX_IMPORTS set to 512
 
+=item C<---with-pic>
+
 =item C<--disable-agent>
 
 =item C<--disable-manuals>

@@ -63,9 +63,19 @@ my %module_build_args = (
     "parent"         => 0,
     "perl"           => '5.010001'
   },
-  test_requires =>
-    {"Test::CChecker" => 0, "Test::More" => '0.94', "perl" => '5.010001'},
-
+  test_requires => {
+    "Test::CChecker" => 0,
+    "Test::More" => '0.94',
+    "perl" => '5.010001'
+  },
+  meta_merge => {
+    resources => {
+      repository => 'https://github.com/inphobia/Alien-SNMP-MAXTC',
+      bugtracker => 'https://github.com/inphobia/Alien-SNMP-MAXTC/issues',
+      MailingList => 'https://lists.sourceforge.net/lists/listinfo/snmp-info-users',
+      IRC => 'irc://irc.libera.chat/#netdisco',
+    },
+  },
 );
 
 my %fallback_build_requires

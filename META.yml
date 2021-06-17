@@ -7,6 +7,7 @@ build_requires:
   IO::Socket::SSL: '1.56'
   Net::SSLeay: '1.49'
   Test::Alien: '0'
+  Test::Manifest: '0.9'
   Test::More: '0.94'
   perl: '5.010001'
 configure_requires:

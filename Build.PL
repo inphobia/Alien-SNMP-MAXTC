@@ -79,7 +79,7 @@ my %module_build_args = (
 );
 
 my %fallback_build_requires
-  = ("Test::Alien" => 0, "Test::More" => '0.94', "perl" => '5.010001');
+  = ("Test::Alien" => 0, "Test::More" => '0.94', "Test::Manifest" => '0.9', "perl" => '5.010001');
 
 unless (eval { Module::Build->VERSION(0.4004) }) {
   delete $module_build_args{test_requires};

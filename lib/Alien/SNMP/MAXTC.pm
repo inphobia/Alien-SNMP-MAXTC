@@ -28,10 +28,10 @@ Version 1.003000
 =head1 SYNOPSIS
 
  use Alien::SNMP::MAXTC;
- # then it's just like SNMP.pm
+ # then it's just like SNMP.pm
  
  say Alien::SNMP::MAXTC->bin_dir;
- # where the net-snmp apps (snmptranslate, etc) live
+ # where the net-snmp apps (snmptranslate, etc) live
 
 =head1 DESCRIPTION
 

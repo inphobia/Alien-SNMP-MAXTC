@@ -65,6 +65,7 @@ my %module_build_args = (
   test_requires => {
     "Test::Alien" => 0,
     "Test::More" => '0.94',
+    "Test::Manifest" => '0.9',
     "perl" => '5.010001'
   },
   meta_merge => {

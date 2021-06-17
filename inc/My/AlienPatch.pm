@@ -5,7 +5,7 @@ use warnings;
 use Tie::File;
 
 sub main::alien_patch {
-  my $newuse = qq{\nuse Alien::SNMP::MAXTC;\n};
+  my $newuse = qq{\nuse Alien::SNMP::MIBDEV;\n};
   tie my @perlmod, 'Tie::File', 'perl/SNMP/SNMP.pm'
     or die "can't open SNMP.pm: $!";
   for (@perlmod) {

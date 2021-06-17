@@ -24,7 +24,6 @@
       "configure" : {
          "requires" : {
             "Alien::Base::ModuleBuild" : "0",
-            "ExtUtils::CChecker" : "0.10",
             "File::ShareDir" : "1.03",
             "Module::Build" : "0.42",
             "PkgConfig" : "0.14026",
@@ -42,7 +41,7 @@
       },
       "test" : {
          "requires" : {
-            "Test::CChecker" : "0",
+            "Test::Alien" : "0",
             "Test::More" : "0.94",
             "perl" : "5.010001"
          }

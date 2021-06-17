@@ -65,6 +65,7 @@
 
 # Avoid archives of this distribution
 \bAlien-SNMP-MAXTC-[\d\.\_]+
+\bAlien-SNMP-MIBDEV-[\d\.\_]+
 
 ^_alien
 ^_build

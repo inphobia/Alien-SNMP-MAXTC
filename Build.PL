@@ -42,7 +42,6 @@ my %module_build_args = (
   configure_requires  => {
     "perl"               => '5.010001',
     "Alien::Base::ModuleBuild" => '0',
-    "ExtUtils::CChecker" => '0.10',
     "File::ShareDir"     => '1.03',
     "Module::Build"      => '0.42',
     "PkgConfig"          => '0.14026',
@@ -64,7 +63,7 @@ my %module_build_args = (
     "perl"           => '5.010001'
   },
   test_requires => {
-    "Test::CChecker" => 0,
+    "Test::Alien" => 0,
     "Test::More" => '0.94',
     "perl" => '5.010001'
   },
@@ -79,7 +78,7 @@ my %module_build_args = (
 );
 
 my %fallback_build_requires
-  = ("Test::CChecker" => 0, "Test::More" => '0.94', "perl" => '5.010001');
+  = ("Test::Alien" => 0, "Test::More" => '0.94', "perl" => '5.010001');
 
 unless (eval { Module::Build->VERSION(0.4004) }) {
   delete $module_build_args{test_requires};

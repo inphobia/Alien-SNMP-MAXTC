@@ -1,3 +1,10 @@
+2.000000 - 2021-xx-xx
+
+  * rework Alien::SNMP::MAXTC in Alien::SNMP::MIBDEV
+  * move to net::snmp 5.8 as base
+  * drop MAXTC patching
+  * patch MAX_IMPORTS to 512
+
 1.001000 - 2020-05-01
 
   * Fix Alien dependencies spec (thibaultduponchelle)

@@ -3,6 +3,8 @@ package My::ModuleBuild;
 use strict;
 use warnings;
 
+our $VERSION = '2.002000';
+
 use parent 'Alien::Base::ModuleBuild';
 
 if ($^O eq 'MSWin32') {

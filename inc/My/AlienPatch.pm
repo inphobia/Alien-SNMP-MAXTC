@@ -4,6 +4,8 @@ use strict;
 use warnings;
 use Tie::File;
 
+our $VERSION = '2.000000';
+
 sub main::alien_patch {
   my $newuse = qq{\nuse Alien::SNMP::MIBDEV;\n};
   tie my @perlmod, 'Tie::File', 'perl/SNMP/SNMP.pm'

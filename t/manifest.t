@@ -1,5 +1,5 @@
-#!perl -T
-use 5.006;
+#!/usr/bin/env perl
+use 5.010001;
 use strict;
 use warnings;
 use Test::More;

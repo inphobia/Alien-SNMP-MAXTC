@@ -33,7 +33,7 @@ my %module_build_args = (
     protocol       => 'https',
     host           => 'github.com',
     location       => '/netdisco/upstream-sources/blob/master/net-snmp/',
-    exact_filename => 'net-snmp-5.7.3.tar.gz?raw=true',
+    exact_filename => 'net-snmp-5.8.tar.gz?raw=true',
   },
   alien_stage_install => 0,
   build_requires      => {
@@ -41,21 +41,20 @@ my %module_build_args = (
   },
   configure_requires  => {
     "perl"               => '5.010001',
-    'Alien::Base::ModuleBuild' => '0',
-    "ExtUtils::CChecker" => '0.10',
+    "Alien::Base::ModuleBuild" => '0',
     "File::ShareDir"     => '1.03',
     "Module::Build"      => '0.42',
     "PkgConfig"          => '0.14026',
     "Test2::Suite"       => '0.000067'
   },
-  create_license    => 1,
+#  create_license    => 1,
   create_readme     => 1,
   dist_abstract     => 'Build and install Net-SNMP',
-  dist_author       => 'Eric A. Miller <emiller AT cpan DOT org>',
-  dist_name         => 'Alien-SNMP-MAXTC',
-  dist_version_from => 'lib/Alien/SNMP/MAXTC.pm',
+  dist_author       => 'Nick Nauwelaerts <inphobia AT cpan DOT org>',
+  dist_name         => 'Alien-SNMP-MIBDEV',
+  dist_version_from => 'lib/Alien/SNMP/MIBDEV.pm',
   license           => 'bsd',
-  module_name       => "Alien::SNMP::MAXTC",
+  module_name       => "Alien::SNMP::MIBDEV",
   recommends        => {},
   requires          => {
     "Alien::Base"    => '0.020',
@@ -63,13 +62,24 @@ my %module_build_args = (
     "parent"         => 0,
     "perl"           => '5.010001'
   },
-  test_requires =>
-    {"Test::CChecker" => 0, "Test::More" => '0.94', "perl" => '5.010001'},
-
+  test_requires => {
+    "Test::Alien" => 0,
+    "Test::More" => '0.94',
+    "Test::Manifest" => '0.9',
+    "perl" => '5.010001'
+  },
+  meta_merge => {
+    resources => {
+      repository => 'https://github.com/inphobia/Alien-SNMP-MIBDEV',
+      bugtracker => 'https://github.com/inphobia/Alien-SNMP-MIBDEV/issues',
+      MailingList => 'https://lists.sourceforge.net/lists/listinfo/snmp-info-users',
+      IRC => 'irc://irc.libera.chat/#netdisco',
+    },
+  },
 );
 
 my %fallback_build_requires
-  = ("Test::CChecker" => 0, "Test::More" => '0.94', "perl" => '5.010001');
+  = ("Test::Alien" => 0, "Test::More" => '0.94', "Test::Manifest" => '0.9', "perl" => '5.010001');
 
 unless (eval { Module::Build->VERSION(0.4004) }) {
   delete $module_build_args{test_requires};

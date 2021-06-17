@@ -1,11 +1,11 @@
-package Alien::SNMP::MAXTC;
+package Alien::SNMP::MIBDEV;
 
 use strict;
 use warnings;
 use 5.010001;
 use parent qw(Alien::Base);
 
-our $VERSION = '1.001000';
+our $VERSION = '2.000000';
 
 1;
 
@@ -17,35 +17,41 @@ __END__
 
 =head1 NAME
 
-Alien::SNMP::MAXTC - Alien package for the Net-SNMP library
+Alien::SNMP::MIBDEV - Alien package for the Net-SNMP library
 
 =head1 VERSION
 
-Version 1.000001
+Version 2.000000
 
 =cut
 
 =head1 SYNOPSIS
 
- use Alien::SNMP::MAXTC;
- # then it's just like SNMP.pm
+ use Alien::SNMP::MIBDEV;
+ # then it's just like SNMP.pm
  
- say Alien::SNMP::MAXTC->bin_dir;
- # where the net-snmp apps (snmptranslate, etc) live
+ say Alien::SNMP::MIBDEV->bin_dir;
+ # where the net-snmp apps (snmptranslate, etc) live
 
 =head1 DESCRIPTION
 
-L<Alien::SNMP::MAXTC> downloads and installs the Net-SNMP library and
+L<Alien::SNMP::MIBDEV> is mainly used for netdisco-mibs development where
+standard settings do not suffice. It's not intended for other purposes.
+
+L<Alien::SNMP::MIBDEV> downloads and installs the Net-SNMP 5.8 library and
 associated perl modules.
 
-This is a fork of L<Alien::SNMP> with some changed options. We may merge-back
-one day.
+This is based on L<Alien::SNMP::MAXTC>.
+
+Compared to the standard module MAX_IMPORTS has been raised to 512.
 
 The library is built with the following options:
 
 =over
 
-=item MAXTC set to 16k
+=item MAX_IMPORTS set to 512
+
+=item C<--with-pic>
 
 =item C<--disable-agent>
 
@@ -71,19 +77,19 @@ The library is built with the following options:
 
 =head2 bin_dir
 
- my $bin_dir = Alien::SNMP::MAXTC->bin_dir;
+ my $bin_dir = Alien::SNMP::MIBDEV->bin_dir;
 
 Returns the location of the net-snmp apps (snmptranslate, etc).
 
 =head2 cflags
 
- my $cflags = Alien::SNMP::MAXTC->cflags;
+ my $cflags = Alien::SNMP::MIBDEV->cflags;
 
 Returns the C compiler flags.
 
 =head2 libs
 
- my $libs = Alien::SNMP::MAXTC->libs;
+ my $libs = Alien::SNMP::MIBDEV->libs;
 
 Returns the linker flags.
 
@@ -94,6 +100,10 @@ Returns the linker flags.
 =item L<Alien>
 
 =item L<Alien::Base>
+
+=item L<Alien::SNMP>
+
+=item L<Alien::SNMP::MAXTC>
 
 =item L<SNMP>
 
@@ -107,9 +117,15 @@ library.
 
 Eric A. Miller, C<< <emiller at cpan.org> >>
 
+Oliver Gorwits
+
+Nick Nauwelaerts
+
 =head1 LICENSE AND COPYRIGHT
 
 Copyright 2015 Eric A. Miller.
+
+Copyright 2021 Nick Nauwelaerts.
 
 This program is distributed under the (Revised) BSD License:
 L<http://www.opensource.org/licenses/BSD-3-Clause>

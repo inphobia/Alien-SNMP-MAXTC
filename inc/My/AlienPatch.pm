@@ -4,8 +4,10 @@ use strict;
 use warnings;
 use Tie::File;
 
+our $VERSION = '2.000000';
+
 sub main::alien_patch {
-  my $newuse = qq{\nuse Alien::SNMP::MAXTC;\n};
+  my $newuse = qq{\nuse Alien::SNMP::MIBDEV;\n};
   tie my @perlmod, 'Tie::File', 'perl/SNMP/SNMP.pm'
     or die "can't open SNMP.pm: $!";
   for (@perlmod) {
@@ -15,12 +17,12 @@ sub main::alien_patch {
     }
   }
 
-  my $maxtc = q{#define MAXTC 16384};
+  my $max_imports = q{#define MAX_IMPORTS 512};
   tie my @parse, 'Tie::File', 'snmplib/parse.c'
     or die "can't open parse.c: $!";
   for (@parse) {
-    if (m/#define\s+MAXTC\s+/) {
-      $_ = $maxtc;
+    if (m/#define\s+MAX_IMPORTS\s+/) {
+      $_ = $max_imports;
       last;
     }
   }

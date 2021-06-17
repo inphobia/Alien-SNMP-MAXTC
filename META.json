@@ -1,10 +1,10 @@
 {
    "abstract" : "Build and install Net-SNMP",
    "author" : [
-      "Eric A. Miller <emiller AT cpan DOT org>"
+      "Nick Nauwelaerts <inphobia AT cpan DOT org>"
    ],
    "dynamic_config" : 1,
-   "generated_by" : "Module::Build version 0.4224",
+   "generated_by" : "Module::Build version 0.4231",
    "license" : [
       "bsd"
    ],
@@ -12,7 +12,7 @@
       "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
       "version" : 2
    },
-   "name" : "Alien-SNMP-MAXTC",
+   "name" : "Alien-SNMP-MIBDEV",
    "prereqs" : {
       "build" : {
          "requires" : {
@@ -24,7 +24,6 @@
       "configure" : {
          "requires" : {
             "Alien::Base::ModuleBuild" : "0",
-            "ExtUtils::CChecker" : "0.10",
             "File::ShareDir" : "1.03",
             "Module::Build" : "0.42",
             "PkgConfig" : "0.14026",
@@ -42,24 +41,33 @@
       },
       "test" : {
          "requires" : {
-            "Test::CChecker" : "0",
+            "Test::Alien" : "0",
+            "Test::Manifest" : "0.9",
             "Test::More" : "0.94",
             "perl" : "5.010001"
          }
       }
    },
    "provides" : {
-      "Alien::SNMP::MAXTC" : {
-         "file" : "lib/Alien/SNMP/MAXTC.pm",
-         "version" : "1.001000"
+      "Alien::SNMP::MIBDEV" : {
+         "file" : "lib/Alien/SNMP/MIBDEV.pm",
+         "version" : "2.000000"
       }
    },
    "release_status" : "stable",
    "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/inphobia/Alien-SNMP-MIBDEV/issues"
+      },
       "license" : [
-         "http://opensource.org/licenses/BSD-3-Clause"
-      ]
+         "http://opensource.org/licenses/bsd-license.php"
+      ],
+      "repository" : {
+         "url" : "https://github.com/inphobia/Alien-SNMP-MIBDEV"
+      },
+      "x_IRC" : "irc://irc.libera.chat/#netdisco",
+      "x_MailingList" : "https://lists.sourceforge.net/lists/listinfo/snmp-info-users"
    },
-   "version" : "1.001000",
-   "x_serialization_backend" : "JSON::PP version 2.97001"
+   "version" : "2.000000",
+   "x_serialization_backend" : "JSON::PP version 4.02"
 }

@@ -41,14 +41,14 @@ my %module_build_args = (
   },
   configure_requires  => {
     "perl"               => '5.010001',
-    'Alien::Base::ModuleBuild' => '0',
+    "Alien::Base::ModuleBuild" => '0',
     "ExtUtils::CChecker" => '0.10',
     "File::ShareDir"     => '1.03',
     "Module::Build"      => '0.42',
     "PkgConfig"          => '0.14026',
     "Test2::Suite"       => '0.000067'
   },
-  create_license    => 1,
+#  create_license    => 1,
   create_readme     => 1,
   dist_abstract     => 'Build and install Net-SNMP',
   dist_author       => 'Eric A. Miller <emiller AT cpan DOT org>',

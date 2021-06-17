@@ -4,7 +4,7 @@
       "Eric A. Miller <emiller AT cpan DOT org>"
    ],
    "dynamic_config" : 1,
-   "generated_by" : "Module::Build version 0.4224",
+   "generated_by" : "Module::Build version 0.4231",
    "license" : [
       "bsd"
    ],
@@ -12,7 +12,7 @@
       "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
       "version" : 2
    },
-   "name" : "Alien-SNMP-MAXTC",
+   "name" : "Alien-SNMP-MIBDEV",
    "prereqs" : {
       "build" : {
          "requires" : {
@@ -49,17 +49,25 @@
       }
    },
    "provides" : {
-      "Alien::SNMP::MAXTC" : {
-         "file" : "lib/Alien/SNMP/MAXTC.pm",
-         "version" : "1.003000"
+      "Alien::SNMP::MIBDEV" : {
+         "file" : "lib/Alien/SNMP/MIBDEV.pm",
+         "version" : "2.000000"
       }
    },
    "release_status" : "stable",
    "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/inphobia/Alien-SNMP-MAXTC/issues"
+      },
       "license" : [
-         "http://opensource.org/licenses/BSD-3-Clause"
-      ]
+         "http://opensource.org/licenses/bsd-license.php"
+      ],
+      "repository" : {
+         "url" : "https://github.com/inphobia/Alien-SNMP-MAXTC"
+      },
+      "x_IRC" : "irc://irc.libera.chat/#netdisco",
+      "x_MailingList" : "https://lists.sourceforge.net/lists/listinfo/snmp-info-users"
    },
-   "version" : "1.003000",
-   "x_serialization_backend" : "JSON::PP version 2.97001"
+   "version" : "2.000000",
+   "x_serialization_backend" : "JSON::PP version 4.02"
 }

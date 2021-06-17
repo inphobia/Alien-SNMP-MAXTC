@@ -18,12 +18,14 @@ DESCRIPTION
     Alien::SNMP::MIBDEV downloads and installs the Net-SNMP 5.8 library and
     associated perl modules.
 
-    This is a fork of Alien::SNMP::MAXTC with MAX_IMPORTS raised to 512.
+    This is based on Alien::SNMP::MAXTC.
+
+    Compared to the standard module MAX_IMPORTS has been raised to 512.
 
     The library is built with the following options:
 
     MAX_IMPORTS set to 512
-    "---with-pic"
+    "--with-pic"
     "--disable-agent"
     "--disable-manuals"
     "--disable-scripts"
@@ -54,6 +56,7 @@ SEE ALSO
     Alien
     Alien::Base
     Alien::SNMP
+    Alien::SNMP::MAXTC
     SNMP
         The Perl5 'SNMP' Extension Module for the Net-SNMP SNMP package.
         Depends on libnetsnmp and the corresponding version is installed

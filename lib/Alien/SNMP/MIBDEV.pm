@@ -41,7 +41,9 @@ standard settings do not suffice. It's not intended for other purposes.
 L<Alien::SNMP::MIBDEV> downloads and installs the Net-SNMP 5.8 library and
 associated perl modules.
 
-This is a fork of L<Alien::SNMP::MAXTC> with MAX_IMPORTS raised to 512.
+This is based on L<Alien::SNMP::MAXTC>.
+
+Compared to the standard module MAX_IMPORTS has been raised to 512.
 
 The library is built with the following options:
 
@@ -49,7 +51,7 @@ The library is built with the following options:
 
 =item MAX_IMPORTS set to 512
 
-=item C<---with-pic>
+=item C<--with-pic>
 
 =item C<--disable-agent>
 
@@ -100,6 +102,8 @@ Returns the linker flags.
 =item L<Alien::Base>
 
 =item L<Alien::SNMP>
+
+=item L<Alien::SNMP::MAXTC>
 
 =item L<SNMP>
 

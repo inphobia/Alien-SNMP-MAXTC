@@ -4,7 +4,7 @@ use strict;
 use warnings;
 use Tie::File;
 
-our $VERSION = '2.000000';
+our $VERSION = '2.010000'; # TRIAL
 
 sub main::alien_patch {
   my $newuse = qq{\nuse Alien::SNMP::MIBDEV;\n};

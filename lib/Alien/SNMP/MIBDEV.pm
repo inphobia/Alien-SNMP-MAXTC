@@ -5,7 +5,7 @@ use warnings;
 use 5.010001;
 use parent qw(Alien::Base);
 
-our $VERSION = '2.000000';
+our $VERSION = '2.010000'; # TRIAL
 
 1;
 
@@ -124,6 +124,8 @@ Nick Nauwelaerts
 =head1 LICENSE AND COPYRIGHT
 
 Copyright 2015 Eric A. Miller.
+
+Copyright 2020 Oliver Gorwits.
 
 Copyright 2021 Nick Nauwelaerts.
 

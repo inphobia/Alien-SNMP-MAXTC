@@ -3,7 +3,7 @@ package My::ModuleBuild;
 use strict;
 use warnings;
 
-our $VERSION = '2.002000';
+our $VERSION = '2.010000'; # TRIAL
 
 use parent 'Alien::Base::ModuleBuild';
 

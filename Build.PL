@@ -67,7 +67,6 @@ my %module_build_args = (
     "File::ShareDir" => '1.03',
     "parent"         => '0',
     "perl"           => '5.010001',
-    "SNMP"           => '0',
   },
   test_requires => {
     "Test::Alien" => 0,

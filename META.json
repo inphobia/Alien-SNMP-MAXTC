@@ -57,7 +57,7 @@
          "version" : "2.020000"
       }
    },
-   "release_status" : "testing",
+   "release_status" : "stable",
    "resources" : {
       "bugtracker" : {
          "web" : "https://github.com/inphobia/Alien-SNMP-MIBDEV/issues"

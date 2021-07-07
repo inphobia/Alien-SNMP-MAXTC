@@ -54,7 +54,7 @@
    "provides" : {
       "Alien::SNMP::MIBDEV" : {
          "file" : "lib/Alien/SNMP/MIBDEV.pm",
-         "version" : "2.010000"
+         "version" : "2.020000"
       }
    },
    "release_status" : "testing",
@@ -71,6 +71,6 @@
       "x_IRC" : "irc://irc.libera.chat/#netdisco",
       "x_MailingList" : "https://lists.sourceforge.net/lists/listinfo/snmp-info-users"
    },
-   "version" : "2.010000",
+   "version" : "2.020000",
    "x_serialization_backend" : "JSON::PP version 4.02"
 }

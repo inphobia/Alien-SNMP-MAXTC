@@ -5,7 +5,7 @@ use warnings;
 use 5.010001;
 use parent qw(Alien::Base);
 
-our $VERSION = '2.010000'; # TRIAL
+our $VERSION = '2.020000';
 
 1;
 
@@ -21,7 +21,7 @@ Alien::SNMP::MIBDEV - Alien package for the Net-SNMP library
 
 =head1 VERSION
 
-Version 2.000000
+Version 2.020000
 
 =cut
 

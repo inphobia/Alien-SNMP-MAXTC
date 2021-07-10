@@ -1,12 +1,16 @@
 name: linux
 
-# Controls when the action will run. 
 on:
-  # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ testing ]
+    branches:
+      - '*'
+    tags-ignore:
+      - '*'
   pull_request:
-    branches: [ testing ]
+    branches:
+      - '*'
+    tags-ignore:
+      - '*'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -20,14 +24,24 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        cip_tag:
-          - "5.34"
-          - "5.32"
-          - "5.26"
-          - "5.16"
+         cip:
+          - env: ALIEN_INSTALL_TYPE=share
+            tag: "5.32"
+          - env: ALIEN_INSTALL_TYPE=system
+            tag: "5.32"
+          - env: ALIEN_INSTALL_TYPE=share
+            tag: "5.26"
+          - env: ALIEN_INSTALL_TYPE=system
+            tag: "5.26"
+          - env: ALIEN_INSTALL_TYPE=share
+          - env: ALIEN_INSTALL_TYPE=share
+            tag: "5.16"
+          - env: ALIEN_INSTALL_TYPE=system
+            tag: "5.16"
 
     env:
-      CIP_TAG: ${{ matrix.cip_tag }}
+      CIP_ENV: ${{ matrix.cip.env }}
+      CIP_TAG: ${{ matrix.cip.tag }}
 
     steps:
       - uses: actions/checkout@v2
@@ -35,11 +49,13 @@ jobs:
       - name: Bootstrap CIP
         run: |
           curl -L https://raw.githubusercontent.com/uperl/cip/main/bin/github-bootstrap | bash
+
       - name: Cache-Key
         id: cache-key
         run: |
           echo -n '::set-output name=key::'
           cip cache-key
+
       - name: Cache CPAN modules
         uses: actions/cache@v2
         with:
@@ -47,18 +63,23 @@ jobs:
           key: ${{ runner.os }}-build-${{ steps.cache-key.outputs.key }}
           restore-keys: |
             ${{ runner.os }}-build-${{ steps.cache-key.outputs.key }}
+
       - name: Start-Container
         run: |
           cip start
+
       - name: Diagnostics
         run: |
           cip diag
+
       - name: Install-Dependencies
         run: |
           cip install
+
       - name: Build + Test
         run: |
           cip script
+
       - name: CPAN log
         if: ${{ failure() }}
         run: |

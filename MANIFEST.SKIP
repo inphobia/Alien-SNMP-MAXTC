@@ -59,7 +59,6 @@
 ^MYMETA\.
 
 # Avoid archives of this distribution
-\bAlien-SNMP-MAXTC-[\d\.\_]+
 \bAlien-SNMP-MIBDEV-[\d\.\_]+
 
 # github ci stuff

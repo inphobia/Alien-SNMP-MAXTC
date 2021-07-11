@@ -30,12 +30,21 @@ share {
     --with-defaults
   /;
 
-  patch [ '%{patch} -p1 < %{.install.patch}/snmplib_parse.c' ];
+  patch [
+    '%{patch} -p1 < %{.install.patch}/snmplib_parse.c',
+    '%{patch} -p1 < %{.install.patch}/perl_snmp_snmp.pm',
+  ];
   build [
     "%{configure} @configure_flags",
     '%{make}',
-    '%{make} install',
+    '%{make} DESTDIR=%{env.DESTDIR} install',
   ];
 
   plugin 'Gather::IsolateDynamic';
 };
+
+gather [
+  [ 'net-snmp-config --version', \'%{.runtime.version}' ],
+  [ 'net-snmp-config --cflags ', \'%{.runtime.cflags}'  ],
+  [ 'net-snmp-config --libs   ', \'%{.runtime.libs}'    ],
+];

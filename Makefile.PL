@@ -2,21 +2,20 @@ use strict;
 use warnings;
 use ExtUtils::MakeMaker;
 use Alien::Build::MM;
-use Getopt::Long qw( GetOptions );
 
-
-my $version;
-GetOptions("version=s" => \$version);
-my $abmm = Alien::Build::MM->new(my_net_snmp_version => $version);
+my $abmm = Alien::Build::MM->new;
 
 WriteMakefile($abmm->mm_args(
-	SIGN         => 1,
+#	SIGN         => 1,
 	ABSTRACT     => 'Alien wrapper for Net-SNMP',
 	DISTNAME     => 'Alien-SNMP-MIBDEV',
 	NAME         => 'Alien::SNMP::MIBDEV',
 	VERSION_FROM => 'lib/Alien/SNMP/MIBDEV.pm',
 	LICENSE      => 'bsd',
-	AUTHOR       => 'Nick Nauwelaerts <inphobia AT cpan DOT org>',
+        AUTHOR       => [ 'Eric A. Miller <emiller AT cpan DOT org>',
+                          'Oliver Gorwits <oliver AT cpan DOT org>',
+                          'Nick Nauwelaerts <inphobia AT cpan DOT org>',
+                        ],
 	META_MERGE => {
 		resources => {
 			homepage => 'https://github.com/inphobia/Alien-SNMP-MIBDEV',
@@ -29,5 +28,9 @@ WriteMakefile($abmm->mm_args(
 ));
 
 sub MY::postamble {
-  $abmm->mm_postamble;
+  $abmm->mm_postamble(@_);
+}
+
+sub MY::install {
+  $abmm->mm_install(@_);
 }

@@ -2,9 +2,11 @@ use strict;
 use warnings;
 use Test::More;
 use Test::Alien;
+use Test::Alien::Diag;
 use Alien::SNMP::MIBDEV;
 
 alien_ok 'Alien::SNMP::MIBDEV';
+alien_diag 'Alien::SNMP::MIBDEV';
 
 xs_ok <<'XS_CODE'
 #include "EXTERN.h"

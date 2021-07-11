@@ -1,3 +1,7 @@
+2.040000 - xxx
+
+  * migrate to alienfile
+
 2.020000 - 2021-07-08
 
   * drop test for snmp.pm module for now

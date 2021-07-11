@@ -1,0 +1,41 @@
+use alienfile;
+
+#plugin 'PkgConfig' => (
+#  pkg_name => 'netsnmp',
+#);
+
+probe sub { 'share' };
+
+share {
+
+  requires 'Test::More' => '0.96';
+  requires 'Text::Template';
+
+  start_url 'https://github.com/netdisco/upstream-sources/blob/master/net-snmp/net-snmp-5.8.tar.gz?raw=true';
+  plugin 'Download';
+
+  plugin 'Extract' => 'tar.gz';
+
+  plugin 'Build::Autoconf';
+
+  my @configure_flags = qw/
+    --disable-agent
+    --disable-manuals
+    --disable-scripts
+    --disable-mibs
+    --enable-ipv6
+    --with-mibs=""
+    --with-perl-modules
+    --disable-embedded-perl
+    --with-defaults
+  /;
+
+  patch [ '%{patch} -p1 < %{.install.patch}/snmplib_parse.c' ];
+  build [
+    "%{configure} @configure_flags",
+    '%{make}',
+    '%{make} install',
+  ];
+
+  plugin 'Gather::IsolateDynamic';
+};
